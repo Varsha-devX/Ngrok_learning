@@ -1,13 +1,5 @@
 from pydantic import BaseModel
 
-class UserCreate(BaseModel):
+class UserSchema(BaseModel):
     name: str
     email: str
-
-class UserResponse(BaseModel):
-    id: int
-    name: str
-    email: str
-
-    class Config:
-        from_attributes = True
